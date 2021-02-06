@@ -1,0 +1,488 @@
+﻿<?xml version="1.0"?>
+<!--this XML is created from a node of Simumerik OPC UA server-->
+<!--By dg-->
+<Sinumerik>
+  <_坐标 Title="坐标weerwer" Description="坐标值" nodeClass="Object">
+    <_几何轴坐标 Title="WCS几何坐标" Description="" nodeClass="Object">
+<_X Title="/Channel/GeometricAxis/actToolBasePosBasic[u1,1]" Description="几何轴X轴坐标" nodeClass="Variable" />
+<_Y Title="/Channel/GeometricAxis/actToolBasePosBasic[u1,2]" Description="几何轴Y轴坐标" nodeClass="Variable" />
+<_Z Title="/Channel/GeometricAxis/actToolBasePosBasic[u1,3]" Description="几何轴Z轴坐标" nodeClass="Variable" />
+<_4 Title="/Channel/GeometricAxis/actToolBasePosBasic[u1,4]" Description="4轴坐标" nodeClass="Variable" />
+	  </_几何轴坐标>
+      <_机床轴坐标 Title="MCS机床轴坐标" Description="" nodeClass="Object">
+		<_X Title="/Channel/MachineAxis/actToolBasePos[u1,1]" Description="机床轴X轴坐标" nodeClass="Variable" />
+		<_Y Title="/Channel/MachineAxis/actToolBasePos[u1,2]" Description="机床轴Y轴坐标" nodeClass="Variable" />
+		<_Z Title="/Channel/MachineAxis/actToolBasePos[u1,3]" Description="机床轴Z轴坐标" nodeClass="Variable" />
+	  </_机床轴坐标>	  
+  </_坐标>
+	<_方式组 Title="方式组" Description="方式组" nodeClass="Object">
+		<_opMode Title="/Bag/State/opMode" Description="Active mode" nodeClass="Variable" />
+		<_readyActive Title="/Bag/State/readyActive" Description="Code whether mode group is ready" nodeClass="Variable" />
+		<_resetActive Title="/Bag/State/resetActive" Description="Code whether all channels in mode group are in Reset" nodeClass="Variable" />
+	</_方式组>
+	<_时间 Title="时间" Description="时间" nodeClass="Object">
+      <_cuttingTime Title="/Channel/ChannelDiagnose/cuttingTime" Description="Tool operating time ( in seconds ):" nodeClass="Variable" />
+      <_cycleTime Title="/Channel/ChannelDiagnose/cycleTime" Description="Runtime of selected NC program ( in seconds ):" nodeClass="Variable" />
+      <_acIpoBuf Title="/Channel/ChannelDiagnose/acIpoBuf" Description="Level of IPO buffer (number of blocks)" nodeClass="Variable" />
+      <_operatingTime Title="/Channel/ChannelDiagnose/operatingTime" Description="Total runtime of NC programs in Automatic mode" nodeClass="Variable" />
+      <_sumCycleTimeNet Title="/Channel/ChannelDiagnose/sumCycleTimeNet" Description="Sum of net run times in ms" nodeClass="Variable" />
+      <_actCycleTimeBrut Title="/Channel/Diagnose/actCycleTimeBrut" Description="actCycleTimeBrut" nodeClass="Variable" />
+      <_actCycleTimeNet Title="/Channel/Diagnose/actCycleTimeNet" Description="actCycleTimeNet" nodeClass="Variable" />	
+	</_时间>
+	<_通道配置 Title="通道配置" Description="通道配置" nodeClass="Object">
+      <_channelName Title="/Channel/Configuration/channelName" Description="Channel name" nodeClass="Variable" />
+      <_maskToolManagement Title="/Channel/Configuration/maskToolManagement" Description="Channel-specific settings for NCK tool management function" nodeClass="Variable" />
+      <_numActAxes Title="/Channel/Configuration/numActAxes" Description="Number of active tools in channel." nodeClass="Variable" />
+      <_numAuxAxes Title="/Channel/Configuration/numAuxAxes" Description="Number of auxiliary axes" nodeClass="Variable" />
+      <_numBasisFrames Title="/Channel/Configuration/numBasisFrames" Description="Number of basic frames in channel" nodeClass="Variable" />
+      <_numGeoAxes Title="/Channel/Configuration/numGeoAxes" Description="Number of geometry axes and orientation axes" nodeClass="Variable" />
+      <_numMachAxes Title="/Channel/Configuration/numMachAxes" Description="No. of highest channel axis." nodeClass="Variable" />
+      <_numRParams Title="/Channel/Configuration/numRParams" Description="Number of channel-specific R variables" nodeClass="Variable" />
+      <_numSpindles Title="/Channel/Configuration/numSpindles" Description="Number of spindles" nodeClass="Variable" />
+      <_numToolEdges Title="/Channel/Configuration/numToolEdges" Description="Number of tool edges in this channel" nodeClass="Variable" />
+      <_numUserFrames Title="/Channel/Configuration/numUserFrames" Description="Number of user frames in this channel" nodeClass="Variable" />
+	</_通道配置>
+	<_程序 Title="程序" Description="程序" nodeClass="Object">
+      <_actLineNumber Title="/Channel/ProgramInfo/actLineNumber" Description="Line number of the current NC instruction (starting at 1)" nodeClass="Variable" />
+      <_actPartProgram Title="/Channel/ProgramInfo/actPartProgram" Description="Content of the current part program starting with the previous block." nodeClass="Variable" />
+      <_workPName Title="/Channel/ProgramInfo/workPName" Description="Name of the active workpiece" nodeClass="Variable" />
+      <_workPNameLong Title="/Channel/ProgramInfo/workPNameLong" Description="Name of the active workpiece" nodeClass="Variable" />
+      <_workPandProgName Title="/Channel/ProgramInfo/workPandProgName" Description="Workpiece name and name of current program." nodeClass="Variable" />
+      <_workPandProgNameVL Title="/Channel/ProgramInfo/workPandProgNameVL" Description="Workpiece name and program name of the current program in the preprocessing." nodeClass="Variable" />
+	</_程序>
+	<_Parameter Title="R参数" Description="Arithmetic parameter" nodeClass="Object">
+      <_R Title="/Channel/Parameter/R[u1,1]" Description="R variables" nodeClass="Variable" />
+      <_rpa Title="/Channel/Parameter/rpa" Description="R variables" nodeClass="Variable" />
+    </_Parameter>
+    <_ProgramModification Title="程序运行状态" Description="Part program-specific state data" nodeClass="Object">
+      <_DRFActive Title="/Channel/ProgramModification/DRFActive" Description="DRF active" nodeClass="Variable" />
+      <_feedStopActive Title="/Channel/ProgramModification/feedStopActive" Description="Feed disable" nodeClass="Variable" />
+      <_ipoBlocksOnly Title="/Channel/ProgramModification/ipoBlocksOnly" Description="Display traversing blocks" nodeClass="Variable" />
+      <_optAssStopActive Title="/Channel/ProgramModification/optAssStopActive" Description="Associated M01 selected" nodeClass="Variable" />
+      <_optStopActive Title="/Channel/ProgramModification/optStopActive" Description="M01 selected" nodeClass="Variable" />
+      <_progTestActive Title="/Channel/ProgramModification/progTestActive" Description="Program test" nodeClass="Variable" />
+      <_rapFeedRateOvrActive Title="/Channel/ProgramModification/rapFeedRateOvrActive" Description="ROV rapid traverse override" nodeClass="Variable" />
+      <_singleBlockActive Title="/Channel/ProgramModification/singleBlockActive" Description="Single block, SBL" nodeClass="Variable" />
+      <_singleBlockType Title="/Channel/ProgramModification/singleBlockType" Description="Single block mode" nodeClass="Variable" />
+      <_skipLevel0Active Title="/Channel/ProgramModification/skipLevel0Active" Description="Info whether skip level /0 is activated." nodeClass="Variable" />
+      <_skipLevel1Active Title="/Channel/ProgramModification/skipLevel1Active" Description="Info whether skip level /1 is activated" nodeClass="Variable" />
+      <_skipLevel2Active Title="/Channel/ProgramModification/skipLevel2Active" Description="Info whether skip level /2 is activated" nodeClass="Variable" />
+      <_skipLevel3Active Title="/Channel/ProgramModification/skipLevel3Active" Description="Info whether skip level /3 is activated" nodeClass="Variable" />
+      <_skipLevel4Active Title="/Channel/ProgramModification/skipLevel4Active" Description="Info whether skip level /4 is activated" nodeClass="Variable" />
+      <_skipLevel5Active Title="/Channel/ProgramModification/skipLevel5Active" Description="Info whether skip level /5 is activated" nodeClass="Variable" />
+      <_skipLevel6Active Title="/Channel/ProgramModification/skipLevel6Active" Description="Info whether skip level /6 is activated." nodeClass="Variable" />
+      <_skipLevel7Active Title="/Channel/ProgramModification/skipLevel7Active" Description="Info whether skip level /7 is activated." nodeClass="Variable" />
+      <_skipLevel8Active Title="/Channel/ProgramModification/skipLevel8Active" Description="Info whether skip level /8 is activated." nodeClass="Variable" />
+      <_skipLevel9Active Title="/Channel/ProgramModification/skipLevel9Active" Description="Info whether skip level /9 is activated." nodeClass="Variable" />
+      <_trialRunActive Title="/Channel/ProgramModification/trialRunActive" Description="Dry run feedrate" nodeClass="Variable" />
+    </_ProgramModification>
+  <_DriveVsa Title="驱动数据" Description="Feed drive data" nodeClass="Object">
+    <_CU Title="/DriveVsa/CU" Description="CU" nodeClass="Object">
+      <_P0009 Title="/DriveVsa/CU/P0009" Description="P0009" nodeClass="Variable" />
+      <_P0972 Title="/DriveVsa/CU/P0972" Description="P0972" nodeClass="Variable" />
+      <_P0976 Title="/DriveVsa/CU/P0976" Description="P0976" nodeClass="Variable" />
+      <_P0977 Title="/DriveVsa/CU/P0977" Description="P0977" nodeClass="Variable" />
+      <_P2106 Title="/DriveVsa/CU/P2106" Description="P2106" nodeClass="Variable" />
+      <_R3988 Title="/DriveVsa/CU/R3988" Description="R3988" nodeClass="Variable" />
+      <_R3996 Title="/DriveVsa/CU/R3996" Description="R3996" nodeClass="Variable" />
+    </_CU>
+    <_CuLinkPre Title="/DriveVsa/CuLinkPre" Description="CuLinkPre" nodeClass="Object">
+      <_103 Title="/DriveVsa/CuLinkPre/103" Description="103" nodeClass="Variable" />
+      <_3954 Title="/DriveVsa/CuLinkPre/3954" Description="3954" nodeClass="Variable" />
+      <_4950 Title="/DriveVsa/CuLinkPre/4950" Description="4950" nodeClass="Variable" />
+      <_4951 Title="/DriveVsa/CuLinkPre/4951" Description="4951" nodeClass="Variable" />
+      <_4955 Title="/DriveVsa/CuLinkPre/4955" Description="4955" nodeClass="Variable" />
+      <_4956 Title="/DriveVsa/CuLinkPre/4956" Description="4956" nodeClass="Variable" />
+    </_CuLinkPre>
+    <_CuPre Title="/DriveVsa/CuPre" Description="CuPre" nodeClass="Object">
+      <_103 Title="/DriveVsa/CuPre/103" Description="103" nodeClass="Variable" />
+      <_3954 Title="/DriveVsa/CuPre/3954" Description="3954" nodeClass="Variable" />
+      <_4950 Title="/DriveVsa/CuPre/4950" Description="4950" nodeClass="Variable" />
+      <_4951 Title="/DriveVsa/CuPre/4951" Description="4951" nodeClass="Variable" />
+      <_4955 Title="/DriveVsa/CuPre/4955" Description="4955" nodeClass="Variable" />
+      <_4956 Title="/DriveVsa/CuPre/4956" Description="4956" nodeClass="Variable" />
+    </_CuPre>
+    <_DC Title="/DriveVsa/DC" Description="DC" nodeClass="Object">
+      <_P0046 Title="/DriveVsa/DC/P0046" Description="P0046" nodeClass="Variable" />
+      <_P0899 Title="/DriveVsa/DC/P0899" Description="P0899" nodeClass="Variable" />
+      <_P9725 Title="/DriveVsa/DC/P9725" Description="P9725" nodeClass="Variable" />
+      <_P9726 Title="/DriveVsa/DC/P9726" Description="P9726" nodeClass="Variable" />
+      <_P9727 Title="/DriveVsa/DC/P9727" Description="P9727" nodeClass="Variable" />
+      <_P9740 Title="/DriveVsa/DC/P9740" Description="P9740" nodeClass="Variable" />
+      <_P9741 Title="/DriveVsa/DC/P9741" Description="P9741" nodeClass="Variable" />
+      <_R0020 Title="/DriveVsa/DC/R0020" Description="R0020" nodeClass="Variable" />
+      <_R0021 Title="/DriveVsa/DC/R0021" Description="R0021" nodeClass="Variable" />
+      <_R0026 Title="/DriveVsa/DC/R0026" Description="R0026" nodeClass="Variable" />
+      <_R0027 Title="/DriveVsa/DC/R0027" Description="R0027" nodeClass="Variable" />
+      <_R0033 Title="/DriveVsa/DC/R0033" Description="R0033" nodeClass="Variable" />
+      <_R0035 Title="/DriveVsa/DC/R0035" Description="R0035" nodeClass="Variable" />
+      <_R1300 Title="/DriveVsa/DC/R1300" Description="R1300" nodeClass="Variable" />
+      <_R1438 Title="/DriveVsa/DC/R1438" Description="R1438" nodeClass="Variable" />
+      <_R9708 Title="/DriveVsa/DC/R9708" Description="R9708" nodeClass="Variable" />
+      <_R9728 Title="/DriveVsa/DC/R9728" Description="R9728" nodeClass="Variable" />
+      <_R9798 Title="/DriveVsa/DC/R9798" Description="R9798" nodeClass="Variable" />
+      <_R9898 Title="/DriveVsa/DC/R9898" Description="R9898" nodeClass="Variable" />
+    </_DC>
+    <_DcPre Title="/DriveVsa/DcPre" Description="DcPre" nodeClass="Object">
+      <_103 Title="/DriveVsa/DcPre/103" Description="103" nodeClass="Variable" />
+      <_3954 Title="/DriveVsa/DcPre/3954" Description="3954" nodeClass="Variable" />
+      <_4950 Title="/DriveVsa/DcPre/4950" Description="4950" nodeClass="Variable" />
+      <_4951 Title="/DriveVsa/DcPre/4951" Description="4951" nodeClass="Variable" />
+      <_4955 Title="/DriveVsa/DcPre/4955" Description="4955" nodeClass="Variable" />
+      <_4956 Title="/DriveVsa/DcPre/4956" Description="4956" nodeClass="Variable" />
+    </_DcPre>
+    <_Drive Title="/DriveVsa/Drive" Description="Machine data" nodeClass="Object">
+      <_R0035 Title="/DriveVsa/Drive/R0035" Description="R0035" nodeClass="Variable" />
+      <_R0078 Title="/DriveVsa/Drive/R0078" Description="R0078" nodeClass="Variable" />
+      <_R0081 Title="/DriveVsa/Drive/R0081" Description="R0081" nodeClass="Variable" />
+      <_r0020 Title="/DriveVsa/Drive/r0020" Description="The currently smoothed speed setpoint at the input of the speed controller resp. the U/f characteristic (after the interpolator)" nodeClass="Variable" />
+      <_r0021 Title="/DriveVsa/Drive/r0021" Description="Smoothed actual motor speed value" nodeClass="Variable" />
+      <_r0027 Title="/DriveVsa/Drive/r0027" Description="Smoothed actual current value" nodeClass="Variable" />
+      <_r0034 Title="/DriveVsa/Drive/r0034" Description="Thermal motor load" nodeClass="Variable" />
+      <_r0035 Title="/DriveVsa/Drive/r0035" Description="Display and connector output for the actual temperature in the motor." nodeClass="Variable" />
+    </_Drive>
+    <_LM Title="/DriveVsa/LM" Description="LM" nodeClass="Object">
+      <_P0899 Title="/DriveVsa/LM/P0899" Description="P0899" nodeClass="Variable" />
+    </_LM>
+    <_LmPre Title="/DriveVsa/LmPre" Description="LmPre" nodeClass="Object">
+      <_103 Title="/DriveVsa/LmPre/103" Description="103" nodeClass="Variable" />
+      <_3954 Title="/DriveVsa/LmPre/3954" Description="3954" nodeClass="Variable" />
+      <_4950 Title="/DriveVsa/LmPre/4950" Description="4950" nodeClass="Variable" />
+      <_4951 Title="/DriveVsa/LmPre/4951" Description="4951" nodeClass="Variable" />
+      <_4955 Title="/DriveVsa/LmPre/4955" Description="4955" nodeClass="Variable" />
+      <_4956 Title="/DriveVsa/LmPre/4956" Description="4956" nodeClass="Variable" />
+    </_LmPre>
+    <_TbPre Title="/DriveVsa/TbPre" Description="TbPre" nodeClass="Object">
+      <_103 Title="/DriveVsa/TbPre/103" Description="103" nodeClass="Variable" />
+      <_3954 Title="/DriveVsa/TbPre/3954" Description="3954" nodeClass="Variable" />
+      <_4950 Title="/DriveVsa/TbPre/4950" Description="4950" nodeClass="Variable" />
+      <_4951 Title="/DriveVsa/TbPre/4951" Description="4951" nodeClass="Variable" />
+      <_4955 Title="/DriveVsa/TbPre/4955" Description="4955" nodeClass="Variable" />
+      <_4956 Title="/DriveVsa/TbPre/4956" Description="4956" nodeClass="Variable" />
+    </_TbPre>
+    <_TmPre Title="/DriveVsa/TmPre" Description="TmPre" nodeClass="Object">
+      <_103 Title="/DriveVsa/TmPre/103" Description="103" nodeClass="Variable" />
+      <_3954 Title="/DriveVsa/TmPre/3954" Description="3954" nodeClass="Variable" />
+      <_4950 Title="/DriveVsa/TmPre/4950" Description="4950" nodeClass="Variable" />
+      <_4951 Title="/DriveVsa/TmPre/4951" Description="4951" nodeClass="Variable" />
+      <_4955 Title="/DriveVsa/TmPre/4955" Description="4955" nodeClass="Variable" />
+      <_4956 Title="/DriveVsa/TmPre/4956" Description="4956" nodeClass="Variable" />
+    </_TmPre>
+  </_DriveVsa>
+    <_SequencedAlarms Title="报警信息" Description="Alarm list, oldest alarm" nodeClass="Object">
+      <_alarmNo Title="/Nck/SequencedAlarms/alarmNo" Description="Ordinal number of an alarm (how many alarms since control ON)" nodeClass="Variable" />
+      <_clearInfo Title="/Nck/SequencedAlarms/clearInfo" Description="Acknowledgement criterion for an alarm" nodeClass="Variable" />
+      <_fillText1 Title="/Nck/SequencedAlarms/fillText1" Description="Parameter 1 of the alarm" nodeClass="Variable" />
+      <_fillText2 Title="/Nck/SequencedAlarms/fillText2" Description="Parameter 2 of the alarm" nodeClass="Variable" />
+      <_fillText3 Title="/Nck/SequencedAlarms/fillText3" Description="Parameter 3 of the alarm" nodeClass="Variable" />
+      <_fillText4 Title="/Nck/SequencedAlarms/fillText4" Description="Parameter 4 of the alarm" nodeClass="Variable" />
+      <_textIndex Title="/Nck/SequencedAlarms/textIndex" Description="Alarm number (actual alarm)" nodeClass="Variable" />
+      <_timeBCD Title="/Nck/SequencedAlarms/timeBCD" Description="Time stamp of an alarm" nodeClass="Variable" />
+    </_SequencedAlarms>
+    <_ServoData Title="驱动状态" Description="Servo data" nodeClass="Object">
+      <_servoDatFl32 Title="/Nck/ServoData/servoDatFl32" Description="Servo data" nodeClass="Variable" />
+      <_servoDatFl64 Title="/Nck/ServoData/servoDatFl64" Description="Servo data" nodeClass="Variable" />
+    </_ServoData>
+	  <_Plc Title="Plc数据" Description="Plc" nodeClass="Object">
+		<_C Title="/Plc/C" Description="" nodeClass="Variable" />
+		<_Clock Title="/Plc/Clock" Description="" nodeClass="Variable" />
+		<_I Title="/Plc/I" Description="" nodeClass="Variable" />
+		<_IB Title="/Plc/IB" Description="" nodeClass="Variable" />
+		<_ID Title="/Plc/ID" Description="" nodeClass="Variable" />
+		<_IW Title="/Plc/IW" Description="" nodeClass="Variable" />
+		<_M Title="/Plc/M" Description="" nodeClass="Variable" />
+		<_MB Title="/Plc/MB" Description="" nodeClass="Variable" />
+		<_MD Title="/Plc/MD" Description="" nodeClass="Variable" />
+		<_MW Title="/Plc/MW" Description="" nodeClass="Variable" />
+		<_Q Title="/Plc/Q" Description="" nodeClass="Variable" />
+		<_QB Title="/Plc/QB" Description="" nodeClass="Variable" />
+		<_QD Title="/Plc/QD" Description="" nodeClass="Variable" />
+		<_QW Title="/Plc/QW" Description="" nodeClass="Variable" />
+		<_T Title="/Plc/T" Description="" nodeClass="Variable" />
+	  </_Plc>	
+  <_Tool Title="/Tool" Description="Tool Data" nodeClass="Object">
+    <_ActiveCatalogue Title="/Tool/ActiveCatalogue" Description="Working offsets: Directory" nodeClass="Object">
+      <_DNo Title="/Tool/ActiveCatalogue/DNo" Description="D number" nodeClass="Variable" />
+      <_cuttEdgeNo Title="/Tool/ActiveCatalogue/cuttEdgeNo" Description="Number of edge for this tool" nodeClass="Variable" />
+      <_duploNo Title="/Tool/ActiveCatalogue/duploNo" Description="Duplo number" nodeClass="Variable" />
+      <_numActDEdges Title="/Tool/ActiveCatalogue/numActDEdges" Description="Number of D numbers in this list" nodeClass="Variable" />
+      <_toolIdent Title="/Tool/ActiveCatalogue/toolIdent" Description="Tool identifier" nodeClass="Variable" />
+      <_toolInMag Title="/Tool/ActiveCatalogue/toolInMag" Description="Magazine in which tool is located" nodeClass="Variable" />
+      <_toolInPlace Title="/Tool/ActiveCatalogue/toolInPlace" Description="Magazine location of tool" nodeClass="Variable" />
+      <_toolNo Title="/Tool/ActiveCatalogue/toolNo" Description="Internal T number" nodeClass="Variable" />
+    </_ActiveCatalogue>
+    <_Adapter Title="/Tool/Adapter" Description="Adapter data" nodeClass="Object">
+      <_adaptData Title="/Tool/Adapter/adaptData" Description="Adapter data" nodeClass="Variable" />
+    </_Adapter>
+    <_Catalogue Title="/Tool/Catalogue" Description="Tool data, directory" nodeClass="Object">
+      <_TnumWZV Title="/Tool/Catalogue/TnumWZV" Description="Last assigned T-number for tool management" nodeClass="Variable" />
+      <_nrDuplo Title="/Tool/Catalogue/nrDuplo" Description="Duplo number" nodeClass="Variable" />
+      <_numCuttEdges Title="/Tool/Catalogue/numCuttEdges" Description="Number of cutting edges of a tool" nodeClass="Variable" />
+      <_numToolGroups Title="/Tool/Catalogue/numToolGroups" Description="numToolGroups" nodeClass="Variable" />
+      <_numTools Title="/Tool/Catalogue/numTools" Description="Number of tools in the area TO" nodeClass="Variable" />
+      <_toolIdent Title="/Tool/Catalogue/toolIdent" Description="Tool identifier" nodeClass="Variable" />
+      <_toolInMag Title="/Tool/Catalogue/toolInMag" Description="Current magazine in which the tool is located" nodeClass="Variable" />
+      <_toolInPlace Title="/Tool/Catalogue/toolInPlace" Description="Current location in which the tool is located" nodeClass="Variable" />
+      <_toolNo Title="/Tool/Catalogue/toolNo" Description="T number" nodeClass="Variable" />
+    </_Catalogue>
+    <_CompTransfor Title="/Tool/CompTransfor" Description="Edge-related location-dependent coarse total offsets, transformed setup offsets" nodeClass="Object">
+      <_cuttEdgeParam Title="/Tool/CompTransfor/cuttEdgeParam" Description="Replaced by $$edgeData" nodeClass="Variable" />
+      <_edgeData Title="/Tool/CompTransfor/edgeData" Description="Adapter-transformed edge offset data and D number list" nodeClass="Variable" />
+      <_edgeECData Title="/Tool/CompTransfor/edgeECData" Description="Transformed location-dependent offsets, setup value" nodeClass="Variable" />
+      <_edgeSCData Title="/Tool/CompTransfor/edgeSCData" Description="Transformed location-dependent offsets, wear" nodeClass="Variable" />
+    </_CompTransfor>
+    <_Compensation Title="/Tool/Compensation" Description="Application-specific tool edge data" nodeClass="Object">
+      <_applEdgeData Title="/Tool/Compensation/applEdgeData" Description="Siemens application tool cutting edge parameter" nodeClass="Variable" />
+      <_cuttEdgeParam Title="/Tool/Compensation/cuttEdgeParam" Description="Replaced by $$edgeData" nodeClass="Variable" />
+      <_edgeData Title="/Tool/Compensation/edgeData" Description="Offset value parameters and cutting edge list with D numbers for a tool" nodeClass="Variable" />
+      <_edgeECData Title="/Tool/Compensation/edgeECData" Description="Location-dependent offsets, setup value" nodeClass="Variable" />
+      <_edgeSCData Title="/Tool/Compensation/edgeSCData" Description="Location-dependent offsets, wear" nodeClass="Variable" />
+      <_siemEdgeData Title="/Tool/Compensation/siemEdgeData" Description="Siemens application tool cutting edge parameter" nodeClass="Variable" />
+    </_Compensation>
+    <_Data Title="/Tool/Data" Description="Application-specific data" nodeClass="Object">
+      <_adaptNo Title="/Tool/Data/adaptNo" Description="Number of adapter defined by system parameter $TC_ADPx which is" nodeClass="Variable" />
+      <_applData Title="/Tool/Data/applData" Description="Siemens application tool parameter" nodeClass="Variable" />
+      <_duploNo Title="/Tool/Data/duploNo" Description="Duplo number (number of replacement tool)" nodeClass="Variable" />
+      <_numCuttEdges Title="/Tool/Data/numCuttEdges" Description="Number of cutting edges of a tool" nodeClass="Variable" />
+      <_siemData Title="/Tool/Data/siemData" Description="Siemens application tool parameter" nodeClass="Variable" />
+      <_toolIdent Title="/Tool/Data/toolIdent" Description="Tool identifier" nodeClass="Variable" />
+      <_toolInMag Title="/Tool/Data/toolInMag" Description="Current magazine in which the tool is located" nodeClass="Variable" />
+      <_toolInMultitool Title="/Tool/Data/toolInMultitool" Description="Still to be defined" nodeClass="Variable" />
+      <_toolInMultitoolPlace Title="/Tool/Data/toolInMultitoolPlace" Description="Still to be defined" nodeClass="Variable" />
+      <_toolInPlace Title="/Tool/Data/toolInPlace" Description="Current location in which the tool is located" nodeClass="Variable" />
+      <_toolInfo Title="/Tool/Data/toolInfo" Description="Tool information for HMI" nodeClass="Variable" />
+      <_toolMaxAcc Title="/Tool/Data/toolMaxAcc" Description="Maximum angular acceleration of the tool if the value is &amp;gt;0. There is no monitoring if no acceleration limit is defined (=0)." nodeClass="Variable" />
+      <_toolMaxVelo Title="/Tool/Data/toolMaxVelo" Description="Maximum speed of the tool if the value is &amp;gt;0. There is no monitoring if no speed limit is defined (=0)." nodeClass="Variable" />
+      <_toolMon Title="/Tool/Data/toolMon" Description="Type of tool monitoring" nodeClass="Variable" />
+      <_toolMyMag Title="/Tool/Data/toolMyMag" Description="Owner magazine of the tool magazine from which the tool was loaded" nodeClass="Variable" />
+      <_toolMyMultitool Title="/Tool/Data/toolMyMultitool" Description="Still to be defined" nodeClass="Variable" />
+      <_toolMyMultitoolPlace Title="/Tool/Data/toolMyMultitoolPlace" Description="Still to be defined" nodeClass="Variable" />
+      <_toolMyPlace Title="/Tool/Data/toolMyPlace" Description="Owner magazine of the tool - Magazine location from which the tool was" nodeClass="Variable" />
+      <_toolProtAreaFile Title="/Tool/Data/toolProtAreaFile" Description="Reserved, do not use!" nodeClass="Variable" />
+      <_toolSearch Title="/Tool/Data/toolSearch" Description="Type of tool search for replacement tools" nodeClass="Variable" />
+      <_toolState Title="/Tool/Data/toolState" Description="Tool state" nodeClass="Variable" />
+      <_toolStateL Title="/Tool/Data/toolStateL" Description="Tool state large" nodeClass="Variable" />
+      <_toolplace_spec Title="/Tool/Data/toolplace_spec" Description="Magazine location type of tool" nodeClass="Variable" />
+      <_toolsize_down Title="/Tool/Data/toolsize_down" Description="Size downwards in half locations" nodeClass="Variable" />
+      <_toolsize_left Title="/Tool/Data/toolsize_left" Description="Size to the left in half locations" nodeClass="Variable" />
+      <_toolsize_right Title="/Tool/Data/toolsize_right" Description="Size to the right in half locations" nodeClass="Variable" />
+      <_toolsize_upper Title="/Tool/Data/toolsize_upper" Description="Size upwards in half locations" nodeClass="Variable" />
+    </_Data>
+    <_Find Title="/Tool/Find" Description="Used as parameter and return value of the PI-Services _N_TMGETT and _N_TSEARC" nodeClass="Object">
+      <_parDataTAD Title="/Tool/Find/parDataTAD" Description="Parameterizing: For parameters with data type DOUBLE of the module TAD a value can be stored as a comparison value for a 'complex search'  (_N_TSEARC)." nodeClass="Variable" />
+      <_parDataTAO Title="/Tool/Find/parDataTAO" Description="Parameterizing: For parameters with data type DOUBLE of the module TAO a value can be stored as a comparison value for a 'complex search'  (_N_TSEARC)." nodeClass="Variable" />
+      <_parDataTAS Title="/Tool/Find/parDataTAS" Description="Parameterizing: For parameters with data type DOUBLE of the module TAS a value can be stored as a comparison value for a 'complex search'  (_N_TSEARC)." nodeClass="Variable" />
+      <_parDataTD Title="/Tool/Find/parDataTD" Description="Parameterizing: For parameters with data type UWORD of the module TD a value can be stored as a comparison value for a 'complex search'  (_N_TSEARC)." nodeClass="Variable" />
+      <_parDataTO Title="/Tool/Find/parDataTO" Description="Parameterizing: For each parameter of the module TO, a value can be stored as a comparison value for the 'complex search' (_N_TSEARC)." nodeClass="Variable" />
+      <_parDataTS Title="/Tool/Find/parDataTS" Description="Parameterizing: For each parameter of the module TS a value can be stored as a comparison value for a 'complex search'  (_N_TSEARC)." nodeClass="Variable" />
+      <_parDataTU Title="/Tool/Find/parDataTU" Description="Parameterizing: For each parameter of the module TU a value can be stored as a comparison value for a 'complex search'  (_N_TSEARC)." nodeClass="Variable" />
+      <_parDataTUE Title="/Tool/Find/parDataTUE" Description="Parameterizing: For each parameter of the module TUE a value can be stored as a comparison value for a 'complex search' (_N_TSEARC)." nodeClass="Variable" />
+      <_parDataTUS Title="/Tool/Find/parDataTUS" Description="Parameterizing: For each parameter of the module TUS a value can be stored as a comparison value for a 'complex search' (_N_TUSEARC)." nodeClass="Variable" />
+      <_parDataToolDuploNo Title="/Tool/Find/parDataToolDuploNo" Description="Parameterizing: For parameters with data type UWORD of the module TD a value can be stored as a comparison value for a 'complex search'  (_N_TSEARC)." nodeClass="Variable" />
+      <_parDataToolIdentTD Title="/Tool/Find/parDataToolIdentTD" Description="Parameterizing: For the parameter with data type string[32] (tool identifier) of the module TD a value can be stored as a comparison value for a 'complex search' (_N_TSEARC)." nodeClass="Variable" />
+      <_parDataToolNumCuttEdges Title="/Tool/Find/parDataToolNumCuttEdges" Description="Parameterizing: For parameters with data type UWORD of the module TD a value can be stored as a comparison value for a 'complex search'  (_N_TSEARC)." nodeClass="Variable" />
+      <_parDataToolToolInMag Title="/Tool/Find/parDataToolToolInMag" Description="Parameterizing: For parameters with data type UWORD of the module TD a value can be stored as a comparison value for a 'complex search'  (_N_TSEARC)." nodeClass="Variable" />
+      <_parDataToolToolInPlace Title="/Tool/Find/parDataToolToolInPlace" Description="Parameterizing: For parameters with data type UWORD of the module TD a value can be stored as a comparison value for a 'complex search'  (_N_TSEARC)." nodeClass="Variable" />
+      <_parDataToolToolInfo Title="/Tool/Find/parDataToolToolInfo" Description="Parameterizing: For parameters with data type UWORD of the module TD a value can be stored as a comparison value for a 'complex search'  (_N_TSEARC)." nodeClass="Variable" />
+      <_parDataToolToolMon Title="/Tool/Find/parDataToolToolMon" Description="Parameterizing: For parameters with data type UWORD of the module TD a value can be stored as a comparison value for a 'complex search'  (_N_TSEARC)." nodeClass="Variable" />
+      <_parDataToolToolSearch Title="/Tool/Find/parDataToolToolSearch" Description="Parameterizing: For parameters with data type UWORD of the module TD a value can be stored as a comparison value for a 'complex search'  (_N_TSEARC)." nodeClass="Variable" />
+      <_parDataToolToolState Title="/Tool/Find/parDataToolToolState" Description="Parameterizing: For parameters with data type UWORD of the module TD a value can be stored as a comparison value for a 'complex search'  (_N_TSEARC)." nodeClass="Variable" />
+      <_parDataToolToolplace_spec Title="/Tool/Find/parDataToolToolplace_spec" Description="Parameterizing: For parameters with data type UWORD of the module TD a value can be stored as a comparison value for a 'complex search'  (_N_TSEARC)." nodeClass="Variable" />
+      <_parDataToolToolsize_down Title="/Tool/Find/parDataToolToolsize_down" Description="Parameterizing: For parameters with data type UWORD of the module TD a value can be stored as a comparison value for a 'complex search'  (_N_TSEARC)." nodeClass="Variable" />
+      <_parDataToolToolsize_left Title="/Tool/Find/parDataToolToolsize_left" Description="Parameterizing: For parameters with data type UWORD of the module TD a value can be stored as a comparison value for a 'complex search'  (_N_TSEARC)." nodeClass="Variable" />
+      <_parDataToolToolsize_right Title="/Tool/Find/parDataToolToolsize_right" Description="Parameterizing: For parameters with data type UWORD of the module TD a value can be stored as a comparison value for a 'complex search'  (_N_TSEARC)." nodeClass="Variable" />
+      <_parDataToolToolsize_upper Title="/Tool/Find/parDataToolToolsize_upper" Description="Parameterizing: For parameters with data type UWORD of the module TD a value can be stored as a comparison value for a 'complex search'  (_N_TSEARC)." nodeClass="Variable" />
+      <_parMasksTAD Title="/Tool/Find/parMasksTAD" Description="Parameterizing: There is a mask for each parameter of the module TAD that indicates whether it is to serve as a search criterion for a 'complex search' (_N_TSEARC) and how it is to be combined." nodeClass="Variable" />
+      <_parMasksTAO Title="/Tool/Find/parMasksTAO" Description="Parameterizing: There is a mask for each parameter of the module TAO that indicates whether it is to serve as a search criterion for a 'complex search' (_N_TSEARC) and how it is to be combined." nodeClass="Variable" />
+      <_parMasksTAS Title="/Tool/Find/parMasksTAS" Description="Parameterizing: There is a mask for each parameter of the module TAS that indicates whether it is to serve as a search criterion for a 'complex search' (_N_TSEARC) and how it is to be combined." nodeClass="Variable" />
+      <_parMasksTD Title="/Tool/Find/parMasksTD" Description="Parameterizing: There is a mask for each parameter of the module TD that indicates whether it is to serve as a search criterion for a 'complex search' (_N_TSEARC) and how it is to be combined." nodeClass="Variable" />
+      <_parMasksTO Title="/Tool/Find/parMasksTO" Description="Parameterizing: There is a mask for each parameter of the module TO" nodeClass="Variable" />
+      <_parMasksTS Title="/Tool/Find/parMasksTS" Description="Parameterizing: There is a mask for each parameter of the module TS" nodeClass="Variable" />
+      <_parMasksTU Title="/Tool/Find/parMasksTU" Description="Parameterizing: There is a mask for each parameter of the module TU" nodeClass="Variable" />
+      <_parMasksTUE Title="/Tool/Find/parMasksTUE" Description="Parameterizing: There is a mask for each parameter of the module TUE" nodeClass="Variable" />
+      <_parMasksTUS Title="/Tool/Find/parMasksTUS" Description="Parameterizing: There is a mask for each parameter of the module TUS that indicates whether it is to serve as a search criterion for a 'complex search' (_N_TUSEARC) and how it is to be combined." nodeClass="Variable" />
+      <_resultCuttingEdgeNrUsed Title="/Tool/Find/resultCuttingEdgeNrUsed" Description="D numbers of the cutting edges used since the last workpiece count, that have previously been used on the defined tool carrier via $$resultNrOfCutEdgesUsed." nodeClass="Variable" />
+      <_resultNrOfCutEdgesUsed Title="/Tool/Find/resultNrOfCutEdgesUsed" Description="Line 1: Number of tool carriers" nodeClass="Variable" />
+      <_resultNrOfTools Title="/Tool/Find/resultNrOfTools" Description="Result: Number of tools found" nodeClass="Variable" />
+      <_resultToolNr Title="/Tool/Find/resultToolNr" Description="Result: T-numbers of the tools found" nodeClass="Variable" />
+      <_resultToolNrUsed Title="/Tool/Find/resultToolNrUsed" Description="T numbers of the cutting edges used since the last workpiece count, that have previously been used on the defined tool carrier via $$resultNrOfCutEdgesUsed." nodeClass="Variable" />
+    </_Find>
+    <_GrindingData Title="/Tool/GrindingData" Description="Tool data, grinding-specific data" nodeClass="Object">
+      <_actToolWide Title="/Tool/GrindingData/actToolWide" Description="Current width of the grinding wheel" nodeClass="Variable" />
+      <_conntectPar Title="/Tool/GrindingData/conntectPar" Description="Chaining rule. This parameter ( which is bitwise defined ) specifies which tool parameters of cutting edge 2 and cutting edge 1 are chained. If the value of any chained parameter is altered, the value of the other chained parameter is automatically adapted." nodeClass="Variable" />
+      <_drsPath Title="/Tool/GrindingData/drsPath" Description="Path to the dressing program" nodeClass="Variable" />
+      <_drsProgname Title="/Tool/GrindingData/drsProgname" Description="Grinder dressing program name." nodeClass="Variable" />
+      <_inclAngle Title="/Tool/GrindingData/inclAngle" Description="Angle of inclination of the inclined grinding wheel in the current plane" nodeClass="Variable" />
+      <_maxRotSpeed Title="/Tool/GrindingData/maxRotSpeed" Description="Maximum rotary speed of the grinding wheel" nodeClass="Variable" />
+      <_maxTipSpeed Title="/Tool/GrindingData/maxTipSpeed" Description="Maximum peripheral  speed of the grinding wheel" nodeClass="Variable" />
+      <_minToolDia Title="/Tool/GrindingData/minToolDia" Description="Minimum diameter of the grinding wheel" nodeClass="Variable" />
+      <_minToolWide Title="/Tool/GrindingData/minToolWide" Description="Minimum width of the grinding wheel" nodeClass="Variable" />
+      <_paramNrCCV Title="/Tool/GrindingData/paramNrCCV" Description="Compensation parameters for the function SUG (&amp;quot;constant perimeter speed of grinding wheel&amp;quot;). These parameters define which compensation value is to be used for SUG, tool monitoring and centerless grinding. The value always refers to cutting edge D1." nodeClass="Variable" />
+      <_spinNoDress Title="/Tool/GrindingData/spinNoDress" Description="Spindle number to which the monitoring data and the function SUG (&amp;quot;constant perimeter speed of grinding wheel&amp;quot;) refer." nodeClass="Variable" />
+    </_GrindingData>
+    <_IsoHDCompensation Title="/Tool/IsoHDCompensation" Description="ISO tool offset data" nodeClass="Object">
+      <_isoCorrParam Title="/Tool/IsoHDCompensation/isoCorrParam" Description="This variable contains the offset values for the ISO2.2 and ISO3.2 modes." nodeClass="Variable" />
+    </_IsoHDCompensation>
+    <_MT Title="/Tool/MT" Description="Application-specific multi-tool data" nodeClass="Object">
+      <_applData Title="/Tool/MT/applData" Description="Siemens application multi-tool data" nodeClass="Variable" />
+      <_multitoolIdent Title="/Tool/MT/multitoolIdent" Description="MT identifier" nodeClass="Variable" />
+      <_multitoolInMag Title="/Tool/MT/multitoolInMag" Description="Number of the magazine on which the multi-tool is located" nodeClass="Variable" />
+      <_multitoolInPlace Title="/Tool/MT/multitoolInPlace" Description="Number of the magazine place at which the multi-tool is located" nodeClass="Variable" />
+      <_multitoolKindOfDist Title="/Tool/MT/multitoolKindOfDist" Description="Type of distance coding" nodeClass="Variable" />
+      <_multitoolMyMag Title="/Tool/MT/multitoolMyMag" Description="Owner magazine of the tool magazine from which the MT was loaded" nodeClass="Variable" />
+      <_multitoolMyPlace Title="/Tool/MT/multitoolMyPlace" Description="Owner magazine place of the MT - magazine place from which the multi-tool" nodeClass="Variable" />
+      <_multitoolNumLoc Title="/Tool/MT/multitoolNumLoc" Description="Number of places in MT" nodeClass="Variable" />
+      <_multitoolPosition Title="/Tool/MT/multitoolPosition" Description="MT position (number of the MT place)" nodeClass="Variable" />
+      <_multitoolProtAreaFile Title="/Tool/MT/multitoolProtAreaFile" Description="Reserved, do not use!" nodeClass="Variable" />
+      <_multitoolStateL Title="/Tool/MT/multitoolStateL" Description="Multi-tool status, significance of the bit values" nodeClass="Variable" />
+      <_multitoolplace_spec Title="/Tool/MT/multitoolplace_spec" Description="MT magazine place type" nodeClass="Variable" />
+      <_multitoolsize_down Title="/Tool/MT/multitoolsize_down" Description="MT size downward in half places" nodeClass="Variable" />
+      <_multitoolsize_left Title="/Tool/MT/multitoolsize_left" Description="MT size to the left in half places" nodeClass="Variable" />
+      <_multitoolsize_right Title="/Tool/MT/multitoolsize_right" Description="MT size to the right in half places" nodeClass="Variable" />
+      <_multitoolsize_upper Title="/Tool/MT/multitoolsize_upper" Description="MT size upward in half places" nodeClass="Variable" />
+      <_siemData Title="/Tool/MT/siemData" Description="Siemens application multi-tool data" nodeClass="Variable" />
+      <_userData Title="/Tool/MT/userData" Description="Multi-tool user data" nodeClass="Variable" />
+    </_MT>
+    <_MTCatalogue Title="/Tool/MTCatalogue" Description="Multi-tool data, directory" nodeClass="Object">
+      <_MTnumWZV Title="/Tool/MTCatalogue/MTnumWZV" Description="Number of the last multi-tool to be created" nodeClass="Variable" />
+      <_multitoolIdent Title="/Tool/MTCatalogue/multitoolIdent" Description="Multi-tool identifier" nodeClass="Variable" />
+      <_multitoolInMag Title="/Tool/MTCatalogue/multitoolInMag" Description="Number of the magazine on which the multi-tool is located" nodeClass="Variable" />
+      <_multitoolInPlace Title="/Tool/MTCatalogue/multitoolInPlace" Description="Number of the magazine place at which the multi-tool is located" nodeClass="Variable" />
+      <_multitoolKindOfDist Title="/Tool/MTCatalogue/multitoolKindOfDist" Description="Type of distance coding" nodeClass="Variable" />
+      <_multitoolNo Title="/Tool/MTCatalogue/multitoolNo" Description="Number of the multi-tool. Array access to the column multitoolNo is" nodeClass="Variable" />
+      <_numLocations Title="/Tool/MTCatalogue/numLocations" Description="Number of places in the multi-tool" nodeClass="Variable" />
+      <_numMultiTools Title="/Tool/MTCatalogue/numMultiTools" Description="Number of defined multi-tools" nodeClass="Variable" />
+    </_MTCatalogue>
+    <_MTPlace Title="/Tool/MTPlace" Description="Application-specific multi-tool place data" nodeClass="Object">
+      <_applPlaceData Title="/Tool/MTPlace/applPlaceData" Description="Siemens application multi-tool place data." nodeClass="Variable" />
+      <_mtPlaceData Title="/Tool/MTPlace/mtPlaceData" Description="P1: Place distance length ($TC_MTPPL)" nodeClass="Variable" />
+      <_siemPlaceData Title="/Tool/MTPlace/siemPlaceData" Description="Siemens application multi-tool place data." nodeClass="Variable" />
+      <_userPlaceData Title="/Tool/MTPlace/userPlaceData" Description="Multi-tool place user data. These parameters can only be used if the machine data $MN_MM_NUM_CC_MTLOC_PARAM and $MN_MM_TOOL_MANAGEMENT_MASK have been set accordingly." nodeClass="Variable" />
+    </_MTPlace>
+    <_Magazine Title="/Tool/Magazine" Description="Application-specific magazine location data" nodeClass="Object">
+      <_applPlaceData Title="/Tool/Magazine/applPlaceData" Description="Siemens application magazine location data." nodeClass="Variable" />
+      <_applPlaceDataDouble Title="/Tool/Magazine/applPlaceDataDouble" Description="Siemens application magazine location data." nodeClass="Variable" />
+      <_multiPlace Title="/Tool/Magazine/multiPlace" Description="P1: Distance between the change position of magazine n and the location m of the first internal magazine (loading magazine, 9999) ($TC_MDP1)" nodeClass="Variable" />
+      <_placeData Title="/Tool/Magazine/placeData" Description="P1: Place type (read-only access) ($TC_MPP1)" nodeClass="Variable" />
+      <_placeType Title="/Tool/Magazine/placeType" Description="Magazine location hierarchy" nodeClass="Variable" />
+      <_siemPlaceData Title="/Tool/Magazine/siemPlaceData" Description="Siemens application magazine location data." nodeClass="Variable" />
+      <_siemPlaceDataDouble Title="/Tool/Magazine/siemPlaceDataDouble" Description="Siemens application magazine location data." nodeClass="Variable" />
+      <_userPlaceData Title="/Tool/Magazine/userPlaceData" Description="Magazine location user data for a tool magazine. These parameters can only be used if the machine data" nodeClass="Variable" />
+      <_userPlaceDataDouble Title="/Tool/Magazine/userPlaceDataDouble" Description="Magazine location user data for a tool magazine. These parameters can only be used if the machine data" nodeClass="Variable" />
+    </_Magazine>
+    <_MagazineCatalogue Title="/Tool/MagazineCatalogue" Description="Magazine data, directory" nodeClass="Object">
+      <_magVIdent Title="/Tool/MagazineCatalogue/magVIdent" Description="Identifier of the magazine" nodeClass="Variable" />
+      <_magVNo Title="/Tool/MagazineCatalogue/magVNo" Description="Number of the magazine" nodeClass="Variable" />
+      <_numActMags Title="/Tool/MagazineCatalogue/numActMags" Description="Number of magazines in the modules TMV and TM" nodeClass="Variable" />
+    </_MagazineCatalogue>
+    <_MagazineConfiguration Title="/Tool/MagazineConfiguration" Description="Magazine data, configuration data" nodeClass="Object">
+      <_magBLMag Title="/Tool/MagazineConfiguration/magBLMag" Description="Number of the internal load magazine" nodeClass="Variable" />
+      <_magCBCmd Title="/Tool/MagazineConfiguration/magCBCmd" Description="Command for magazine execution" nodeClass="Variable" />
+      <_magCBCmdState Title="/Tool/MagazineConfiguration/magCBCmdState" Description="Command state of the magazine (for magCBCmd)" nodeClass="Variable" />
+      <_magCBIdent Title="/Tool/MagazineConfiguration/magCBIdent" Description="Identifier of the magazine" nodeClass="Variable" />
+      <_magCMCmdPar1 Title="/Tool/MagazineConfiguration/magCMCmdPar1" Description="Return variable for the command MagCBCmd" nodeClass="Variable" />
+      <_magCMCmdPar2 Title="/Tool/MagazineConfiguration/magCMCmdPar2" Description="Return variable for the command MagCBCmd" nodeClass="Variable" />
+      <_magRPlaces Title="/Tool/MagazineConfiguration/magRPlaces" Description="Total number of real magazine locations (incl. buffer and loading locations)" nodeClass="Variable" />
+      <_magSearch Title="/Tool/MagazineConfiguration/magSearch" Description="Type of tool search. This variable is bitwise defined." nodeClass="Variable" />
+      <_magVPlaces Title="/Tool/MagazineConfiguration/magVPlaces" Description="Number of defined locations for the control block" nodeClass="Variable" />
+      <_magZWMag Title="/Tool/MagazineConfiguration/magZWMag" Description="Number of internal buffer magazine" nodeClass="Variable" />
+      <_modeWearGroup Title="/Tool/MagazineConfiguration/modeWearGroup" Description="Definition of strategies relating to wear group." nodeClass="Variable" />
+    </_MagazineConfiguration>
+    <_MagazineDescription Title="/Tool/MagazineDescription" Description="Application-specific magazine data" nodeClass="Object">
+      <_applData Title="/Tool/MagazineDescription/applData" Description="Siemens application magazine data." nodeClass="Variable" />
+      <_applDataDouble Title="/Tool/MagazineDescription/applDataDouble" Description="Siemens application magazine data." nodeClass="Variable" />
+      <_magActPlace Title="/Tool/MagazineDescription/magActPlace" Description="Current magazine position" nodeClass="Variable" />
+      <_magCmd Title="/Tool/MagazineDescription/magCmd" Description="Command for magazine execution" nodeClass="Variable" />
+      <_magCmdPar1 Title="/Tool/MagazineDescription/magCmdPar1" Description="Command parameter of the magazine" nodeClass="Variable" />
+      <_magCmdPar2 Title="/Tool/MagazineDescription/magCmdPar2" Description="Command parameter of the magazine" nodeClass="Variable" />
+      <_magCmdState Title="/Tool/MagazineDescription/magCmdState" Description="Command state of the magazine" nodeClass="Variable" />
+      <_magDim Title="/Tool/MagazineDescription/magDim" Description="Dimension of the magazine, number of magazine lines in the box magazine" nodeClass="Variable" />
+      <_magDim2 Title="/Tool/MagazineDescription/magDim2" Description="Dimension of the magazine, number of columns in the box magazine" nodeClass="Variable" />
+      <_magIdent Title="/Tool/MagazineDescription/magIdent" Description="Identifier of the magazine" nodeClass="Variable" />
+      <_magKind Title="/Tool/MagazineDescription/magKind" Description="Type of the magazine" nodeClass="Variable" />
+      <_magLink1 Title="/Tool/MagazineDescription/magLink1" Description="Chaining 1 of the magazine to the following magazine. Number to (next) background magazine. Can be used with chain, revolver and box magazines (magKind = 1,3 or 5)" nodeClass="Variable" />
+      <_magLink2 Title="/Tool/MagazineDescription/magLink2" Description="Chaining 2 of the magazine to the previous magazine. Backward chaining of background magazines. Can be used for chaining to chain, revolver and box magazines (magKind = 1, 3 or 5)" nodeClass="Variable" />
+      <_magNo Title="/Tool/MagazineDescription/magNo" Description="Number of the magazine" nodeClass="Variable" />
+      <_magNrPlaces Title="/Tool/MagazineDescription/magNrPlaces" Description="Number of real locations (in chain magazine) or number of slots (in box magazine)" nodeClass="Variable" />
+      <_magPlaceSearchStrat Title="/Tool/MagazineDescription/magPlaceSearchStrat" Description="magPlaceSearchStrat" nodeClass="Variable" />
+      <_magPlaceUserDataNumLimit Title="/Tool/MagazineDescription/magPlaceUserDataNumLimit" Description="Readability of all OEM magazine location data" nodeClass="Variable" />
+      <_magState Title="/Tool/MagazineDescription/magState" Description="State of the magazine" nodeClass="Variable" />
+      <_magToolSearchStrat Title="/Tool/MagazineDescription/magToolSearchStrat" Description="Tool search strategy during tool change" nodeClass="Variable" />
+      <_magWearCompoundNo Title="/Tool/MagazineDescription/magWearCompoundNo" Description="Each magazine has its own active wear group (wear group number)." nodeClass="Variable" />
+      <_siemData Title="/Tool/MagazineDescription/siemData" Description="Siemens application magazine data." nodeClass="Variable" />
+      <_siemDataDouble Title="/Tool/MagazineDescription/siemDataDouble" Description="Siemens application magazine data." nodeClass="Variable" />
+      <_userData Title="/Tool/MagazineDescription/userData" Description="Magazine user data for a tool magazine. These parameters can only be used if the machine data" nodeClass="Variable" />
+      <_userDataDouble Title="/Tool/MagazineDescription/userDataDouble" Description="Magazine user data for a tool magazine. These parameters can only be used if the machine data" nodeClass="Variable" />
+    </_MagazineDescription>
+    <_Supervision Title="/Tool/Supervision" Description="Application-specific monitoring data" nodeClass="Object">
+      <_applData Title="/Tool/Supervision/applData" Description="Siemens application monitoring data of a tool cutting edge." nodeClass="Variable" />
+      <_data Title="/Tool/Supervision/data" Description="Notice: The variable is not documented for the user!" nodeClass="Variable" />
+      <_dummy Title="/Tool/Supervision/dummy" Description="Notice: The variable is not documented for the user!" nodeClass="Variable" />
+      <_siemData Title="/Tool/Supervision/siemData" Description="Siemens application monitoring data of a tool cutting edge." nodeClass="Variable" />
+      <_userData Title="/Tool/Supervision/userData" Description="User data for monitoring  a cutting edge. These parameters can only be used if the machine data $MN_MM_NUM_CC_MON_PARAM and $MN_MM_TOOL_MANAGEMENT_MASK have been set accordingly." nodeClass="Variable" />
+    </_Supervision>
+    <_ToolCarrier Title="/Tool/ToolCarrier" Description="Toolholder parameters" nodeClass="Object">
+      <_tcCarr1 Title="/Tool/ToolCarrier/tcCarr1" Description="x component of offset vector l1" nodeClass="Variable" />
+      <_tcCarr10 Title="/Tool/ToolCarrier/tcCarr10" Description="x component of rotary axis v2" nodeClass="Variable" />
+      <_tcCarr11 Title="/Tool/ToolCarrier/tcCarr11" Description="y component of rotary axis v2" nodeClass="Variable" />
+      <_tcCarr12 Title="/Tool/ToolCarrier/tcCarr12" Description="z component of rotary axis v2" nodeClass="Variable" />
+      <_tcCarr13 Title="/Tool/ToolCarrier/tcCarr13" Description="Angle of rotation alpha1 (in degrees)" nodeClass="Variable" />
+      <_tcCarr14 Title="/Tool/ToolCarrier/tcCarr14" Description="Angle of rotation alpha2 (in degrees)" nodeClass="Variable" />
+      <_tcCarr15 Title="/Tool/ToolCarrier/tcCarr15" Description="x component of offset vector l3" nodeClass="Variable" />
+      <_tcCarr16 Title="/Tool/ToolCarrier/tcCarr16" Description="y component of offset vector l3" nodeClass="Variable" />
+      <_tcCarr17 Title="/Tool/ToolCarrier/tcCarr17" Description="z component of offset vector l3" nodeClass="Variable" />
+      <_tcCarr18 Title="/Tool/ToolCarrier/tcCarr18" Description="x component of offset vector l4" nodeClass="Variable" />
+      <_tcCarr19 Title="/Tool/ToolCarrier/tcCarr19" Description="y component of offset vector l4" nodeClass="Variable" />
+      <_tcCarr2 Title="/Tool/ToolCarrier/tcCarr2" Description="y component of offset vector l1" nodeClass="Variable" />
+      <_tcCarr20 Title="/Tool/ToolCarrier/tcCarr20" Description="z component of offset vector l4" nodeClass="Variable" />
+      <_tcCarr21 Title="/Tool/ToolCarrier/tcCarr21" Description="Axis identifier of 1st rotary axis" nodeClass="Variable" />
+      <_tcCarr22 Title="/Tool/ToolCarrier/tcCarr22" Description="Axis identifier of 2nd rotary axis" nodeClass="Variable" />
+      <_tcCarr23 Title="/Tool/ToolCarrier/tcCarr23" Description="Kinematic type" nodeClass="Variable" />
+      <_tcCarr24 Title="/Tool/ToolCarrier/tcCarr24" Description="Offset of 1st rotary axis in degrees" nodeClass="Variable" />
+      <_tcCarr25 Title="/Tool/ToolCarrier/tcCarr25" Description="Offset of 2nd rotary axis in degrees" nodeClass="Variable" />
+      <_tcCarr26 Title="/Tool/ToolCarrier/tcCarr26" Description="Offset of Hirth tooth system in degrees of 1st rotary axis" nodeClass="Variable" />
+      <_tcCarr27 Title="/Tool/ToolCarrier/tcCarr27" Description="Offset of Hirth tooth system in degrees of 2nd rotary axis" nodeClass="Variable" />
+      <_tcCarr28 Title="/Tool/ToolCarrier/tcCarr28" Description="Increment of Hirth tooth system in degrees of 1st rotary axis" nodeClass="Variable" />
+      <_tcCarr29 Title="/Tool/ToolCarrier/tcCarr29" Description="Increment of Hirth tooth system in degrees of 2nd rotary axis" nodeClass="Variable" />
+      <_tcCarr3 Title="/Tool/ToolCarrier/tcCarr3" Description="z component of offset vector l1" nodeClass="Variable" />
+      <_tcCarr30 Title="/Tool/ToolCarrier/tcCarr30" Description="Minimum position of 1st rotary axis" nodeClass="Variable" />
+      <_tcCarr31 Title="/Tool/ToolCarrier/tcCarr31" Description="Minimum position of 2nd rotary axis" nodeClass="Variable" />
+      <_tcCarr32 Title="/Tool/ToolCarrier/tcCarr32" Description="Maximum position of 1st rotary axis" nodeClass="Variable" />
+      <_tcCarr33 Title="/Tool/ToolCarrier/tcCarr33" Description="Maximum position of 2nd rotary axis" nodeClass="Variable" />
+      <_tcCarr34 Title="/Tool/ToolCarrier/tcCarr34" Description="Toolholder name" nodeClass="Variable" />
+      <_tcCarr35 Title="/Tool/ToolCarrier/tcCarr35" Description="Axis name 1" nodeClass="Variable" />
+      <_tcCarr36 Title="/Tool/ToolCarrier/tcCarr36" Description="Axis name 2" nodeClass="Variable" />
+      <_tcCarr37 Title="/Tool/ToolCarrier/tcCarr37" Description="Identifier" nodeClass="Variable" />
+      <_tcCarr38 Title="/Tool/ToolCarrier/tcCarr38" Description="Position component X" nodeClass="Variable" />
+      <_tcCarr39 Title="/Tool/ToolCarrier/tcCarr39" Description="Position component Y" nodeClass="Variable" />
+      <_tcCarr4 Title="/Tool/ToolCarrier/tcCarr4" Description="x component of offset vector l2" nodeClass="Variable" />
+      <_tcCarr40 Title="/Tool/ToolCarrier/tcCarr40" Description="Position component Z" nodeClass="Variable" />
+      <_tcCarr41 Title="/Tool/ToolCarrier/tcCarr41" Description="x-component of the fine offset of the offset vector l1" nodeClass="Variable" />
+      <_tcCarr42 Title="/Tool/ToolCarrier/tcCarr42" Description="y-component of the fine offset of the offset vector l1" nodeClass="Variable" />
+      <_tcCarr43 Title="/Tool/ToolCarrier/tcCarr43" Description="z-component of the fine offset of the offset vector l1" nodeClass="Variable" />
+      <_tcCarr44 Title="/Tool/ToolCarrier/tcCarr44" Description="x-component of the fine offset of the offset vector l2" nodeClass="Variable" />
+      <_tcCarr45 Title="/Tool/ToolCarrier/tcCarr45" Description="y-component of the fine offset of the offset vector l2" nodeClass="Variable" />
+      <_tcCarr46 Title="/Tool/ToolCarrier/tcCarr46" Description="z-component of the fine offset of the offset vector l2" nodeClass="Variable" />
+      <_tcCarr5 Title="/Tool/ToolCarrier/tcCarr5" Description="y component of offset vector l2" nodeClass="Variable" />
+      <_tcCarr55 Title="/Tool/ToolCarrier/tcCarr55" Description="x-component of the fine offset of the offset vector l3" nodeClass="Variable" />
+      <_tcCarr56 Title="/Tool/ToolCarrier/tcCarr56" Description="y-component of the fine offset of the offset vector l3" nodeClass="Variable" />
+      <_tcCarr57 Title="/Tool/ToolCarrier/tcCarr57" Description="z-component of the fine offset of the offset vector l3" nodeClass="Variable" />
+      <_tcCarr58 Title="/Tool/ToolCarrier/tcCarr58" Description="x-component of the fine offset of the offset vector l4" nodeClass="Variable" />
+      <_tcCarr59 Title="/Tool/ToolCarrier/tcCarr59" Description="y-component of the fine offset of the offset vector l4" nodeClass="Variable" />
+      <_tcCarr6 Title="/Tool/ToolCarrier/tcCarr6" Description="z component of offset vector l2" nodeClass="Variable" />
+      <_tcCarr60 Title="/Tool/ToolCarrier/tcCarr60" Description="z-component of the fine offset of the offset vector l4" nodeClass="Variable" />
+      <_tcCarr64 Title="/Tool/ToolCarrier/tcCarr64" Description="Fine offset of the offset of the rotary axis v1" nodeClass="Variable" />
+      <_tcCarr65 Title="/Tool/ToolCarrier/tcCarr65" Description="Fine offset of the offset of the rotary axis v2" nodeClass="Variable" />
+      <_tcCarr7 Title="/Tool/ToolCarrier/tcCarr7" Description="x component of rotary axis v1" nodeClass="Variable" />
+      <_tcCarr8 Title="/Tool/ToolCarrier/tcCarr8" Description="y component of rotary axis v1" nodeClass="Variable" />
+      <_tcCarr9 Title="/Tool/ToolCarrier/tcCarr9" Description="z component of rotary axis v1" nodeClass="Variable" />
+    </_ToolCarrier>
+    <_Tools Title="/Tool/Tools" Description="Tool parameters of the Siemens application" nodeClass="Object">
+      <_toolDataChangeInfo Title="/Tool/Tools/toolDataChangeInfo" Description="Siemens application tool parameter" nodeClass="Variable" />
+    </_Tools>
+    <_User Title="/Tool/User" Description="Tool data for OEM" nodeClass="Object">
+      <_data Title="/Tool/User/data" Description="User-defined tool parameter. Important: This is a two-dimensional variable, the column index is the parameter number" nodeClass="Variable" />
+      <_edgeData Title="/Tool/User/edgeData" Description="User-defined cutting edge parameter. Important: This is a two-dimensional variable, the column index is the T number" nodeClass="Variable" />
+    </_User>
+  </_Tool>
+</Sinumerik>
